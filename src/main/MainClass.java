@@ -12,7 +12,8 @@ public class MainClass {
     public static void main(String[] args) throws Exception {
         //System.out.println(getValueSwing());
         //System.out.println(getValueStream());
-        leapYearTest();
+        //leapYearTest();
+        forLoop();
     }
 
     private static void leapYearTest() throws IOException {
@@ -42,6 +43,15 @@ public class MainClass {
 
     private static boolean isLeapWithAlgebra(int year) {
         return ((year % 4 == 0 && year % 100 != 0) || (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)) && new GregorianCalendar().isLeapYear(year);
+    }
+
+    private static void forLoop() {
+        for (int i = 100; i >= 0; i--) {
+            System.out.print("Zahl: " + i + "        ");
+            if (i % 2 == 0)
+                System.out.print("Quadratzahl: " + i * i + "       ");
+            System.out.println("2-er Potenz: " + Math.pow(2, i));
+        }
     }
 
 
